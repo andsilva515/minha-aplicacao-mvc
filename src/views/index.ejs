@@ -9,7 +9,7 @@
 <body>
     <h1>Lista de Tarefas</h1>
     <ul>
-        <% tarefas.forEach(tarega => { %>
+        <% tarefas.forEach(tarefa => { %>
             <li><%= tarefa.descricao %> <a href="/remover/<%= tarefa.id %>">[Remover]</a></li>
          <% }); %>   
     </ul>
