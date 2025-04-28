@@ -1,15 +1,11 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const path = require('path'); // <<<<<< Adicionado
 const app = express();
-
-// Importação do controller
-const tarefaController = require('./src/controllers/tarefaController');
+const tarefaController = require('./controllers/tarefaController');
 
 // Configurações
 app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, 'views')); // <<<<<< Adicionado
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // Rotas
